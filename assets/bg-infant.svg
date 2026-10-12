@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <!-- 空 -->
+  <rect width="800" height="200" fill="#fce7f3"/>
+  <!-- グラデーション -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fdf4ff"/>
+      <stop offset="100%" stop-color="#fce7f3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sky)"/>
+  <!-- 雲 -->
+  <ellipse cx="120" cy="50" rx="60" ry="25" fill="white" opacity="0.8"/>
+  <ellipse cx="150" cy="45" rx="45" ry="22" fill="white" opacity="0.7"/>
+  <ellipse cx="600" cy="40" rx="70" ry="28" fill="white" opacity="0.7"/>
+  <ellipse cx="640" cy="35" rx="55" ry="24" fill="white" opacity="0.6"/>
+  <!-- 星 -->
+  <circle cx="700" cy="30" r="3" fill="#f9a8d4"/>
+  <circle cx="50"  cy="25" r="2" fill="#f9a8d4"/>
+  <circle cx="400" cy="20" r="3" fill="#e879f9"/>
+  <!-- 地面（柔らか） -->
+  <ellipse cx="400" cy="200" rx="500" ry="60" fill="#fbcfe8" opacity="0.5"/>
+  <!-- ゆりかご的な曲線 -->
+  <path d="M 280 170 Q 400 130 520 170" stroke="#f9a8d4" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

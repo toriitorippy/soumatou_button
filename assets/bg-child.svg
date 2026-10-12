@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7dd3fc"/>
+      <stop offset="60%" stop-color="#bfdbfe"/>
+      <stop offset="100%" stop-color="#86efac"/>
+    </linearGradient>
+  </defs>
+  <!-- 空 -->
+  <rect width="800" height="200" fill="url(#sky2)"/>
+  <!-- 太陽 -->
+  <circle cx="680" cy="45" r="35" fill="#fde047" opacity="0.9"/>
+  <circle cx="680" cy="45" r="28" fill="#fbbf24"/>
+  <!-- 雲 -->
+  <ellipse cx="200" cy="55" rx="70" ry="28" fill="white" opacity="0.85"/>
+  <ellipse cx="230" cy="48" rx="50" ry="22" fill="white" opacity="0.8"/>
+  <!-- 草地 -->
+  <rect x="0" y="150" width="800" height="50" fill="#4ade80" opacity="0.8"/>
+  <ellipse cx="400" cy="150" rx="450" ry="20" fill="#86efac"/>
+  <!-- 木 -->
+  <rect x="95" y="110" width="10" height="50" fill="#92400e"/>
+  <ellipse cx="100" cy="100" rx="35" ry="40" fill="#16a34a"/>
+  <rect x="670" y="115" width="10" height="45" fill="#78350f"/>
+  <ellipse cx="675" cy="105" rx="30" ry="35" fill="#15803d"/>
+  <!-- 学校の建物シルエット -->
+  <rect x="340" y="90" width="120" height="70" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+  <polygon points="340,90 400,55 460,90" fill="#bfdbfe" stroke="#93c5fd" stroke-width="2"/>
+  <rect x="375" y="120" width="20" height="40" fill="#7c3aed" opacity="0.6"/>
+</svg>

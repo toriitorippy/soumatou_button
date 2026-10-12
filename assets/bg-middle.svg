@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="50%" stop-color="#fed7aa"/>
+      <stop offset="100%" stop-color="#fca5a5" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="70%" cy="35%" r="20%">
+      <stop offset="0%" stop-color="#fcd34d"/>
+      <stop offset="50%" stop-color="#f97316" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="200" fill="url(#sunset)"/>
+  <!-- 太陽の光芒 -->
+  <rect width="800" height="200" fill="url(#sun)" opacity="0.6"/>
+  <!-- 山のシルエット -->
+  <polygon points="0,200 200,90 400,200" fill="#9a3412" opacity="0.3"/>
+  <polygon points="300,200 500,70 700,200" fill="#7c2d12" opacity="0.35"/>
+  <polygon points="600,200 800,100 800,200" fill="#9a3412" opacity="0.3"/>
+  <!-- 地平線 -->
+  <rect x="0" y="165" width="800" height="35" fill="#451a03" opacity="0.15"/>
+  <!-- 電柱・都市シルエット -->
+  <rect x="100" y="110" width="4" height="90" fill="#1e293b" opacity="0.5"/>
+  <rect x="100" y="115" width="30" height="2" fill="#1e293b" opacity="0.5"/>
+  <rect x="700" y="100" width="4" height="100" fill="#1e293b" opacity="0.5"/>
+  <!-- ビルのシルエット -->
+  <rect x="30"  y="130" width="55" height="70"  fill="#0f172a" opacity="0.25"/>
+  <rect x="720" y="120" width="70" height="80"  fill="#0f172a" opacity="0.25"/>
+  <rect x="630" y="135" width="45" height="65"  fill="#1e293b" opacity="0.2"/>
+  <!-- 反射する川 -->
+  <ellipse cx="400" cy="185" rx="350" ry="15" fill="#fbbf24" opacity="0.3"/>
+  <!-- 飛ぶ鳥 -->
+  <path d="M 200 70 Q 210 65 220 70" stroke="#7c2d12" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 225 68 Q 235 63 245 68" stroke="#7c2d12" stroke-width="2" fill="none" opacity="0.7"/>
+  <path d="M 550 55 Q 560 50 570 55" stroke="#7c2d12" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>

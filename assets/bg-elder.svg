@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="60%" stop-color="#e2e8f0"/>
+      <stop offset="100%" stop-color="#cbd5e1"/>
+    </linearGradient>
+    <filter id="blur">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+  <rect width="800" height="200" fill="url(#dawn)"/>
+  <!-- 霞んだ山々 -->
+  <polygon points="0,200 250,100 500,200" fill="#cbd5e1" opacity="0.4"/>
+  <polygon points="300,200 550,80 800,200" fill="#e2e8f0" opacity="0.5"/>
+  <polygon points="600,200 800,110 800,200" fill="#d1d5db" opacity="0.4"/>
+  <!-- 霧のライン -->
+  <rect x="0" y="130" width="800" height="15" fill="white" opacity="0.6" filter="url(#blur)"/>
+  <rect x="0" y="150" width="800" height="10" fill="white" opacity="0.5" filter="url(#blur)"/>
+  <!-- 地面 -->
+  <rect x="0" y="170" width="800" height="30" fill="#f1f5f9" opacity="0.7"/>
+  <!-- 桜・梅の木 -->
+  <rect x="130" y="120" width="7" height="80" fill="#92400e" opacity="0.6"/>
+  <ellipse cx="133" cy="108" rx="42" ry="35" fill="#fda4af" opacity="0.6"/>
+  <ellipse cx="115" cy="120" rx="28" ry="22" fill="#f9a8d4" opacity="0.5"/>
+  <ellipse cx="155" cy="118" rx="25" ry="20" fill="#fbcfe8" opacity="0.5"/>
+  <!-- 松の木 -->
+  <rect x="652" y="110" width="8" height="90" fill="#713f12" opacity="0.5"/>
+  <polygon points="630,125 656,75 682,125" fill="#166534" opacity="0.6"/>
+  <polygon points="635,145 656,105 677,145" fill="#15803d" opacity="0.5"/>
+  <!-- 縁側的な建物シルエット -->
+  <rect x="300" y="130" width="200" height="70" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="1.5"/>
+  <polygon points="280,135 400,110 520,135" fill="#d1d5db" stroke="#cbd5e1" stroke-width="1"/>
+  <!-- 池の反射 -->
+  <ellipse cx="400" cy="185" rx="120" ry="10" fill="#bfdbfe" opacity="0.35"/>
+  <!-- 鳥（一羽） -->
+  <path d="M 60 60 Q 72 52 84 60" stroke="#94a3b8" stroke-width="2.5" fill="none" opacity="0.7"/>
+</svg>

@@ -1,0 +1,1540 @@
+[
+  {
+    "id": "tp_elementary",
+    "age": 12,
+    "title": "小学校の卒業と中学受験",
+    "description": "小学校6年生。12年間の人生で初めての大きな選択。中学受験に挑むか、それとも自然体で進むか。君の個性がここで試される。",
+    "stat": "中学受験者の割合：全国平均16%、東京都では約27%。受験勉強は小学4年から平均2〜3年かかる",
+    "choices": [
+      {
+        "label": "📚 難関私立中学を受験する",
+        "condition": { "intellect": 50 },
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 0.50,
+        "effect": { "stress": 25, "effort": 10 },
+        "successEffect": { "intellect": 22, "academic": 15, "stress": -5 },
+        "failureEffect": { "stress": 30, "intellect": 5 },
+        "successMsg": "合格！難関私立中学への入学。周囲のレベルの高さに刺激を受ける。ここからが本当の勝負だ。",
+        "failureMsg": "不合格。受験勉強の日々も無駄ではなかったが、夢の学校には届かなかった。地元の公立中学へ進む。",
+        "stat": "第一志望合格率：約30〜40%。中学受験塾費用：年間100〜150万円"
+      },
+      {
+        "label": "⚽ 地元の公立中学でスポーツに打ち込む",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.20, "sociable": 0.05 },
+        "successRate": 1.0,
+        "effect": { "stress": -5, "health": 10, "athletic": 10, "effort": 5 },
+        "successMsg": "公立中学に進学し、部活動に全力を注いだ。汗と友情の日々が始まる。",
+        "stat": "公立中学校数：全国約9,400校。運動部の参加率：約55%"
+      },
+      {
+        "label": "🎨 地元の公立中学で芸術・文化活動に集中する",
+        "condition": null,
+        "personalityBonus": { "creative": 0.20, "studious": 0.05 },
+        "successRate": 1.0,
+        "effect": { "stress": -5, "intellect": 5, "appearance": 5 },
+        "successMsg": "美術・音楽・演劇など文化系の活動に情熱を注いだ。独自の感性が磨かれていく。",
+        "stat": "文化系部活参加率：約45%。音楽・美術系の部活は感受性と集中力を伸ばす"
+      },
+      {
+        "label": "😌 のんびり地元の公立中学へ進む",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -10, "health": 5, "luck": 3 },
+        "successMsg": "プレッシャーのない中学生活。自分のペースで過ごした3年間だった。",
+        "stat": "公立中学校でのびのび育った子供の方が、長期的な幸福度が高いという研究もある"
+      }
+    ]
+  },
+  {
+    "id": "tp_first_love",
+    "age": 13,
+    "title": "初恋",
+    "description": "中学1年生の春。クラスに気になる人が現れた。この気持ち、本物だ。どうする？",
+    "stat": "初恋の平均年齢：約10歳（小学校高学年）。中学生の約60%が恋愛感情を持つ経験をしている",
+    "firstLoveTP": true,
+    "choices": [
+      {
+        "label": "💌 勇気を出して告白する",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.15, "ambitious": 0.10 },
+        "successRate": 0.52,
+        "effect": { "stress": 15 },
+        "successEffect": { "stress": -10, "health": 10, "luck": 8, "appearance": 3 },
+        "failureEffect": { "stress": 25, "health": -5 },
+        "successMsg": "両想いだった！ドキドキしながら渡した手紙への返事は「好きです」だった。",
+        "failureMsg": "「ごめんなさい」という一言が胸に刺さった。でも、勇気を出せたことは誇りに思う。",
+        "stat": "告白の成功率は平均約35〜55%。失恋も大切な成長の経験"
+      },
+      {
+        "label": "📓 日記に気持ちを書くだけにする",
+        "condition": null,
+        "personalityBonus": { "creative": 0.10, "easygoing": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 5, "stress": -5 },
+        "successMsg": "気持ちを言葉にした。ページを埋めるほどの感情が、文章力と感受性を磨いた。",
+        "stat": "日記をつける習慣は感情制御能力を高め、精神的健康に良い影響がある（心理学研究）"
+      },
+      {
+        "label": "🤝 友達として仲良くなることに専念する",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.20, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "luck": 5, "stress": -3, "appearance": 2 },
+        "successMsg": "友達として仲良くなれた。距離を縮めながら、関係を大切に育てていく。",
+        "stat": "恋愛に発展する確率は友人関係から始まる場合が最も高い"
+      },
+      {
+        "label": "📚 恋愛より勉強に集中する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.20, "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 10, "academic": 8, "stress": 5 },
+        "successMsg": "恋心をエネルギーに変えて勉強に打ち込んだ。テストの点数が上がった。",
+        "stat": "恋愛のエネルギーを学業に昇華することで成績が向上するケースも"
+      }
+    ]
+  },
+  {
+    "id": "tp_club",
+    "age": 14,
+    "title": "中学2年の転機",
+    "description": "中2病とも言われる多感な時期。自分が何者かを模索し始める。この選択があなたの個性をより鮮明にする。",
+    "stat": "中学2年生は人格形成において最も重要な時期の一つとされる（発達心理学）",
+    "choices": [
+      {
+        "label": "📖 勉強を頑張って成績を上げる",
+        "condition": null,
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 0.70,
+        "effect": { "effort": 10, "stress": 15 },
+        "successEffect": { "intellect": 15, "academic": 15, "stress": 5 },
+        "failureEffect": { "intellect": 5, "stress": 20 },
+        "successMsg": "努力が実を結び、成績が大幅に上がった。先生や親から認められた。",
+        "failureMsg": "頑張ったが成果はいまひとつ。でも努力する習慣が身についた。",
+        "stat": "中学時代に勉強習慣がついた人の大学進学率：約78%"
+      },
+      {
+        "label": "⚡ 生徒会・委員会で活躍する",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.20, "ambitious": 0.10 },
+        "successRate": 0.65,
+        "effect": { "effort": 5, "stress": 10 },
+        "successEffect": { "luck": 10, "intellect": 8, "stress": -5 },
+        "failureEffect": { "stress": 15 },
+        "successMsg": "生徒会長に当選！リーダーシップが磨かれた経験は、後の人生で活きてくる。",
+        "failureMsg": "当選はできなかったが、チャレンジした経験が自信になった。",
+        "stat": "生徒会経験者の社会人での評価：リーダーシップと協調性が高いと評価されやすい"
+      },
+      {
+        "label": "🎸 バンドを組んだり、個人の趣味を深める",
+        "condition": null,
+        "personalityBonus": { "creative": 0.20, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "stress": -10, "appearance": 5, "luck": 5 },
+        "successMsg": "趣味の世界が広がった。仲間との交流も増え、自分らしさが育っていく。",
+        "stat": "中学時代に明確な趣味を持った人は、創造性と自己肯定感が高い傾向にある"
+      },
+      {
+        "label": "📱 SNSや友人関係に全力投球",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.15 },
+        "successRate": 1.0,
+        "effect": { "stress": 5, "luck": 8, "appearance": 3 },
+        "successMsg": "友達の輪が広がった。コミュニケーション能力が自然と磨かれていく。",
+        "stat": "10代のSNS利用率：約80%。友人関係の充実は幸福度と強く相関する"
+      }
+    ]
+  },
+  {
+    "id": "tp_high_exam",
+    "age": 15,
+    "title": "夢への挑戦（中3）",
+    "description": "中学3年生。この先の人生を大きく変えるかもしれない選択。本気でプロを目指すか、現実的な進路を選ぶか。あなたの夢はどこにある？",
+    "stat": "「夢の職業に就けた」と答えた社会人：わずか7%。でも挑戦した人だけが可能性を持つ",
+    "choices": [
+      {
+        "label": "📚 普通に高校受験を頑張る（公立進学校）",
+        "condition": null,
+        "personalityBonus": { "studious": 0.10, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "intellect": 8, "effort": 5, "stress": 8 },
+        "successMsg": "堅実な選択。公立高校からでも大学、就職と道は広がっている。",
+        "stat": "高校進学率98.8%。公立高校生が全体の約70%を占める"
+      },
+      {
+        "label": "🏭 工業・商業系の専門高校へ進む",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.05, "easygoing": 0.10 },
+        "successRate": 1.0,
+        "effect": { "effort": 10, "intellect": 3, "stress": 5 },
+        "successMsg": "手に職をつける道。卒業後は即戦力として就職できる実用的なスキルを身につける。",
+        "stat": "工業・商業高校からの就職率：約80%。技術職・事務職への直接就職が多い"
+      },
+      {
+        "label": "📖 地元の進学塾に通い難関大を狙う",
+        "condition": { "intellect": 55 },
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 0.55,
+        "effect": { "stress": 20, "intellect": 5 },
+        "successEffect": { "intellect": 20, "academic": 18, "effort": 10, "stress": 10 },
+        "failureEffect": { "intellect": 8, "stress": 25, "money": -10 },
+        "successMsg": "猛勉強の末、志望校の合格圏に入った！努力が報われた瞬間だ。",
+        "failureMsg": "思うように成績は伸びなかった。でも努力したことは確かだ。",
+        "stat": "大手予備校通塾生で難関大進学：約30〜40%。塾代年間50〜100万円"
+      },
+      {
+        "label": "⚽ 部活（スポーツ）に全力を注ぐ",
+        "condition": { "athletic": 45 },
+        "personalityBonus": { "athletic": 0.15, "sociable": 0.05 },
+        "successRate": 0.35,
+        "effect": { "health": 10, "effort": 8, "stress": 10 },
+        "successEffect": { "athletic": 20, "health": 15, "effort": 15, "stress": -5 },
+        "failureEffect": { "athletic": 8, "stress": 15, "health": 5 },
+        "successMsg": "部活で頭角を現した！スポーツ推薦で上位校への道も見えてきた。",
+        "failureMsg": "全力を尽くしたが、全国の壁は厚かった。それでも仲間との日々は一生の宝だ。",
+        "stat": "中学生の部活加入率：約85%。スポーツ推薦で高校へ進む生徒：約3〜5%"
+      },
+      {
+        "label": "⚾ プロ野球選手を目指す",
+        "condition": { "effort": 60, "health": 62 },
+        "personalityBonus": { "athletic": 0.15, "ambitious": 0.05 },
+        "successRate": 0.002,
+        "effect": { "stress": 20, "effort": 12 },
+        "successEffect": { "money": 400, "health": 15, "stress": -20 },
+        "failureEffect": { "stress": 35, "health": -5, "money": -20 },
+        "setJobOnSuccess": "baseball_pro",
+        "successMsg": "ドラフト指名！NPBへの切符を手にした。全国の球児の頂点に立った瞬間。",
+        "failureMsg": "プロの門は閉ざされた。高校・大学で野球を続けるという道もある。",
+        "stat": "プロ野球ドラフト指名：全国の球児約100万人から約100人。確率0.01%"
+      },
+      {
+        "label": "🎤 芸能界・アイドルを目指す",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.10, "creative": 0.10 },
+        "successRate": 0.005,
+        "effect": { "stress": 20, "luck": -5 },
+        "successEffect": { "money": 200, "luck": 25 },
+        "failureEffect": { "stress": 30, "money": -20 },
+        "setJobOnSuccess": "idol",
+        "successMsg": "オーディション突破！芸能事務所に所属が決まった。スターへの道は険しいが、始まった。",
+        "failureMsg": "何万人の応募者の中に埋もれた。才能が足りないのか、運か。おそらく両方。",
+        "stat": "芸能オーディション合格率：大手事務所で0.1〜0.5%。安定収入を得られるのは5%未満"
+      }
+    ]
+  },
+  {
+    "id": "tp_high_club",
+    "age": 16,
+    "title": "高校の選択",
+    "description": "高校入学。どんな高校を選んだかが、大学受験の可能性を大きく左右する。あなたの学力と個性に合った道を選べ。",
+    "stat": "高校進学率：98.8%。進学校（偏差値65以上）に通う生徒：全体の約15%",
+    "choices": [
+      {
+        "label": "🏆 難関進学校（偏差値70以上）を目指す",
+        "condition": { "intellect": 70 },
+        "personalityBonus": { "studious": 0.20, "ambitious": 0.15 },
+        "successRate": 0.60,
+        "effect": { "stress": 20 },
+        "successEffect": { "intellect": 25, "academic": 20, "effort": 15, "stress": 15 },
+        "failureEffect": { "intellect": 10, "stress": 25 },
+        "successMsg": "合格！日比谷・北野などの進学校へ。東大を目指す猛者たちと切磋琢磨する日々が始まる。",
+        "failureMsg": "不合格。実力不足だった。2番手校でも、やる気次第で道は開ける。",
+        "stat": "難関進学校の合格率：受験者の20〜40%。東大合格者の8割は偏差値70以上の高校出身"
+      },
+      {
+        "label": "📖 中堅進学校（偏差値55〜65）へ進む",
+        "condition": { "intellect": 45 },
+        "successRate": 1.0,
+        "effect": { "intellect": 10, "academic": 8, "stress": 8 },
+        "successMsg": "中堅校に入学。マーチ・関関同立クラスの大学を目指すには十分なスタート地点。",
+        "stat": "中堅進学校からの大学進学率：約85%"
+      },
+      {
+        "label": "⚽ 強豪運動部がある高校に入る",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.20 },
+        "successRate": 1.0,
+        "effect": { "athletic": 20, "health": 10, "effort": 10, "intellect": -5 },
+        "successMsg": "スポーツで全国を目指す高校生活が始まった。勉強よりも汗！",
+        "stat": "甲子園（野球）に出場できる学校：全国約4,000校中49校。高校生スポーツ競技は夢の舞台"
+      },
+      {
+        "label": "🔧 工業・商業・専門高校へ進む",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "effort": 15, "intellect": -5 },
+        "successMsg": "手に職をつける道を選んだ。就職率は高く、現場で活きる技術を3年で身につける。",
+        "stat": "工業高校からの就職率：約70%。即戦力として評価され、初任給は大卒より低いが早期昇給も"
+      },
+      {
+        "label": "🌐 海外留学・インターナショナルスクールへ",
+        "condition": { "intellect": 55, "money": 80 },
+        "personalityBonus": { "ambitious": 0.15, "creative": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 15, "money": -200, "luck": 10, "stress": 10 },
+        "successMsg": "海外の高校へ進学！英語力と国際感覚が一気に磨かれた。帰国子女として大学受験も選択肢に。",
+        "stat": "高校時代の海外留学経験者：全体の約2%。帰国後の就職市場での評価は高い"
+      }
+    ]
+  },
+  {
+    "id": "tp_highlife_hobby",
+    "age": 17,
+    "title": "高校生活の過ごし方",
+    "description": "高校2年生。青春の真っ只中。このかけがえのない時間をどう使うか。将来につながる選択もあれば、今だけの選択もある。",
+    "stat": "高校生の放課後の過ごし方1位：スマホ・SNS（約3時間）。勉強：約1時間（ベネッセ調査）",
+    "choices": [
+      {
+        "label": "📚 受験勉強に全力を注ぐ",
+        "condition": null,
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 15, "academic": 18, "stress": 20, "effort": 10 },
+        "successMsg": "センター試験・共通テストに向けた勉強漬けの日々。この積み重ねが未来の自分を作る。",
+        "stat": "大学進学率：56.5%。受験勉強を本格的に始めるのが遅いほど志望校に届かなくなる"
+      },
+      {
+        "label": "💕 恋愛に全力投球する",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.10, "creative": 0.05 },
+        "successRate": 0.60,
+        "effect": { "stress": -5, "health": 5 },
+        "successEffect": { "stress": -20, "health": 10, "luck": 10 },
+        "failureEffect": { "stress": 25, "health": -5 },
+        "successMsg": "両想いになれた！青春の記憶に永遠に残る、あの頃の恋愛。",
+        "failureMsg": "片想いのまま終わってしまった。でもその経験が、深みのある人間を作る。",
+        "stat": "高校生の交際経験者：約40%。高校の恋愛は結婚につながることも稀だが、人格形成に重要"
+      },
+      {
+        "label": "🎸 バイトを始めて社会経験を積む",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.10, "sociable": 0.05 },
+        "successRate": 1.0,
+        "effect": { "money": 30, "effort": 8, "stress": 5, "intellect": -3 },
+        "successMsg": "初めてのバイト。理不尽なこともあったが、お金の価値と社会の一端を学んだ。",
+        "stat": "高校生のアルバイト経験率：約40%。社会経験として評価されることもあるが、学業への影響も"
+      },
+      {
+        "label": "⚽ 部活動に情熱を注ぐ",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.20, "creative": 0.10 },
+        "successRate": 0.50,
+        "effect": { "effort": 10, "health": 8, "stress": 10 },
+        "successEffect": { "athletic": 20, "effort": 15, "luck": 10 },
+        "failureEffect": { "effort": 8, "stress": 15 },
+        "successMsg": "県大会・全国大会に出場！努力が形になった瞬間の感動は一生忘れない。",
+        "failureMsg": "全国の壁は厚かった。でも仲間との時間と努力は、かけがえのない財産になった。",
+        "stat": "高校生の運動部参加率：約40%。全国大会出場者：参加者の約3%"
+      },
+      {
+        "label": "🌍 海外旅行・短期留学を経験する",
+        "condition": { "money": 50 },
+        "personalityBonus": { "creative": 0.10, "ambitious": 0.08 },
+        "successRate": 1.0,
+        "effect": { "intellect": 10, "luck": 8, "money": -50 },
+        "successMsg": "初めての海外体験。日本の外から見た世界が、価値観を大きく変えた。",
+        "stat": "高校生の海外経験率：約30%（修学旅行含む）。語学・異文化への興味が生涯の財産になることも"
+      }
+    ]
+  },
+  {
+    "id": "tp_university",
+    "age": 18,
+    "title": "大学受験",
+    "description": "人生最初の大きな関門。どの大学を目指すか。偏差値・学費・立地・就職実績。考慮すべきことは山積みだ。",
+    "stat": "大学・短大進学率：60.7%。浪人生の割合：約10%。受験に費やす費用：塾代込みで平均約200万円",
+    "choices": [
+      {
+        "label": "🏛 東大・京大・一橋などの最難関国立大学",
+        "condition": { "intellect": 80 },
+        "personalityBonus": { "studious": 0.20, "ambitious": 0.10 },
+        "successRate": 0.35,
+        "effect": { "stress": 35 },
+        "successEffect": { "intellect": 30, "academic": 25, "money": -300, "stress": -10, "luck": 20 },
+        "failureEffect": { "stress": 40, "money": -50, "intellect": 8 },
+        "successMsg": "合格！最高峰の学府へ。ここで得る知識・人脈・ブランドが人生を変えるかもしれない。",
+        "failureMsg": "不合格。あと少しだったかもしれない。浪人して再挑戦か、私立の雄に切り替えるか。",
+        "stat": "東大合格者数：約3,000人/年。同世代の約0.25%。旧帝大全体でも同世代の2%未満"
+      },
+      {
+        "label": "🏛 地方国立大学（旧帝大以外）",
+        "condition": { "intellect": 60 },
+        "personalityBonus": { "studious": 0.10 },
+        "successRate": 0.60,
+        "effect": { "stress": 15 },
+        "successEffect": { "intellect": 18, "academic": 15, "money": -200, "luck": 8 },
+        "failureEffect": { "stress": 20, "intellect": 5 },
+        "successMsg": "地方国立大学に合格！学費が安く、地域密着型の就職に強い選択。",
+        "failureMsg": "惜しくも不合格。私立大学に切り替えるか、浪人か。",
+        "stat": "地方国立大学の競争率：平均2〜4倍。学費は4年間で約240万円（文系）"
+      },
+      {
+        "label": "🎓 早慶・MARCHなど有名私立大学",
+        "condition": { "intellect": 55 },
+        "personalityBonus": { "sociable": 0.05, "ambitious": 0.05 },
+        "successRate": 0.55,
+        "effect": { "stress": 15 },
+        "successEffect": { "intellect": 15, "academic": 12, "money": -350, "luck": 10 },
+        "failureEffect": { "stress": 20, "intellect": 5 },
+        "successMsg": "合格！早慶・MARCHの学歴は就職市場で強い武器になる。学費は高いが。",
+        "failureMsg": "不合格。もう一段階下の大学を受けるか、浪人して再チャレンジか。",
+        "stat": "早稲田・慶應の合格倍率：学部によっては10〜15倍。私大文系学費：4年間平均430万円"
+      },
+      {
+        "label": "🔨 専門学校で技術・資格を取得する",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.05, "athletic": 0.05 },
+        "successRate": 1.0,
+        "effect": { "effort": 12, "intellect": 3 },
+        "successMsg": "専門学校へ進学。手に職をつけるという実直な選択。就職率は高い。",
+        "stat": "専門学校卒の就職率：約97%。資格・スキルで勝負する道"
+      },
+      {
+        "label": "✈ 海外大学・留学する",
+        "condition": { "intellect": 65, "money": 200 },
+        "personalityBonus": { "ambitious": 0.15, "creative": 0.10 },
+        "successRate": 0.70,
+        "effect": { "stress": 25, "money": -500 },
+        "successEffect": { "intellect": 25, "luck": 20, "money": -300 },
+        "failureEffect": { "stress": 30, "money": -200 },
+        "successMsg": "海外の大学に合格！英語圏での学生生活が始まった。この経験は唯一無二の財産になる。",
+        "failureMsg": "語学力が足りず、目標の大学には届かなかった。国内に切り替える。",
+        "stat": "海外大学進学者：年間約4万人。欧米の一流大学に入ると年間学費が300〜700万円に"
+      },
+      {
+        "label": "💼 大学に進まず働き始める",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": 10, "luck": -5, "intellect": -5 },
+        "successMsg": "高卒で社会に出る。苦労することも多いが、若いうちから経験を積める。",
+        "stat": "高卒就職者の3年以内離職率：約46%。進学しない選択も一つの道"
+      }
+    ]
+  },
+  {
+    "id": "tp_gap_year",
+    "age": 19,
+    "title": "大学1年生の選択",
+    "description": "大学に入学、あるいは浪人・働き始めた19歳。この1年間をどう使うかで、その後の軌跡が大きく変わる。",
+    "stat": "大学1年生の中退率：約2.5%/年。入学後に進路を変更する学生が増えている",
+    "choices": [
+      {
+        "label": "📚 授業・勉学に真剣に取り組む",
+        "condition": null,
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 12, "academic": 10, "stress": 10 },
+        "successMsg": "大学の学問は高校とは別物の深さがあった。専門知識が着実に蓄積されていく。",
+        "stat": "大学での学習時間が長い学生ほど初任給・就職先が良い傾向にある（リクルート調査）"
+      },
+      {
+        "label": "🌏 ギャップイヤーを取って海外を旅する",
+        "condition": { "money": 50 },
+        "personalityBonus": { "creative": 0.15, "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 10, "luck": 12, "stress": -15, "money": -80 },
+        "successMsg": "バックパック一つで世界を旅した。言語も文化も違う場所で、自分の価値観が揺さぶられた。",
+        "stat": "ギャップイヤー経験者の就職後の評価：外資・グローバル企業で特に高評価。国内でも増加傾向"
+      },
+      {
+        "label": "💻 プログラミング・スキルを独学で習得する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.10, "ambitious": 0.08 },
+        "successRate": 0.60,
+        "effect": { "intellect": 5, "effort": 10, "stress": 10 },
+        "successEffect": { "intellect": 20, "academic": 10, "luck": 10 },
+        "failureEffect": { "intellect": 8, "stress": 15 },
+        "successMsg": "独学でプログラミングをマスターした。IT就職市場で圧倒的に有利なスキルを手に入れた。",
+        "failureMsg": "挫折してしまった。でも基礎は身についた。また挑戦しよう。",
+        "stat": "IT人材不足：2030年には約79万人不足の見込み（経済産業省）。プログラミングスキルの市場価値は高い"
+      },
+      {
+        "label": "🍺 サークル・友人関係を楽しむ",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.20, "easygoing": 0.10 },
+        "successRate": 1.0,
+        "effect": { "stress": -20, "luck": 8, "health": 5, "intellect": -5 },
+        "successMsg": "大学生活を謳歌した。人脈と思い出は、社会に出てから意外な形で役立つ。",
+        "stat": "大学時代の友人が仕事で助けになった経験：約45%（社会人調査）"
+      }
+    ]
+  },
+  {
+    "id": "tp_uni_major",
+    "age": 20,
+    "title": "大学2年・専攻の覚悟",
+    "description": "専攻や将来の方向性を固める時期。このまま学業を続けるか、別の道を模索するか。20歳の岐路に立つ。",
+    "stat": "大学2年時に将来の職業が「決まっている」学生：約30%。「全く決まっていない」：約40%（ベネッセ）",
+    "choices": [
+      {
+        "label": "🔬 専攻に真剣に向き合い研究に没頭する",
+        "condition": { "intellect": 55 },
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.10 },
+        "successRate": 0.65,
+        "effect": { "stress": 15, "effort": 10 },
+        "successEffect": { "intellect": 18, "academic": 20, "luck": 8 },
+        "failureEffect": { "intellect": 8, "stress": 20 },
+        "successMsg": "研究が面白くなってきた。教授から「大学院に来ないか」と声がかかった。",
+        "failureMsg": "研究の壁にぶつかった。それでも挑戦した経験は本物の知性を養った。",
+        "stat": "大学院進学率：約12%。理系は約40%が大学院へ進む"
+      },
+      {
+        "label": "💼 インターンシップで実務経験を積む",
+        "condition": null,
+        "personalityBonus": { "ambitious": 0.15, "sociable": 0.10 },
+        "successRate": 0.70,
+        "effect": { "effort": 10, "stress": 10 },
+        "successEffect": { "money": 20, "luck": 12, "intellect": 8 },
+        "failureEffect": { "stress": 15 },
+        "successMsg": "インターン先での評価が高く、早期内定の話が出てきた。実務経験は武器になる。",
+        "failureMsg": "インターンは厳しかった。自分の甘さを知ることができた。",
+        "stat": "インターンシップ経験者の内定取得率：未経験者より約20%高い（就職みらい研究所）"
+      },
+      {
+        "label": "🎨 創作・アート活動に時間を使う",
+        "condition": null,
+        "personalityBonus": { "creative": 0.20, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "stress": -10, "intellect": 5, "luck": 5 },
+        "successMsg": "自分の感性が磨かれていく。表現する喜びを知った大学時代。",
+        "stat": "クリエイティブ産業への就職者：年間約10万人。ポートフォリオが評価の鍵"
+      },
+      {
+        "label": "🏋 体を鍛えてスポーツに励む",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.15, "easygoing": 0.08 },
+        "successRate": 1.0,
+        "effect": { "health": 15, "stress": -10, "appearance": 8 },
+        "successMsg": "身体も精神も鍛えられた。健康な体が、これからの長い人生の基盤になる。",
+        "stat": "大学運動部に所属した学生の社会人後の健康状態：平均より良好な傾向"
+      }
+    ]
+  },
+  {
+    "id": "tp_uni_romance",
+    "age": 21,
+    "title": "大学時代の恋愛",
+    "description": "大学3年生。就活が近づく一方で、캠퍼스での出会いも最盛期。恋愛と将来、どちらを優先するか。",
+    "stat": "大学生の交際率：約30%（2021年調査）。大学時代の恋人と結婚する確率：約10〜15%",
+    "choices": [
+      {
+        "label": "💑 真剣な恋愛をする",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.15 },
+        "successRate": 0.55,
+        "effect": { "stress": 5 },
+        "successEffect": { "health": 15, "stress": -20, "luck": 8 },
+        "failureEffect": { "stress": 25, "health": -5 },
+        "successMsg": "大学で運命の人に出会えた。一緒にいると時間を忘れる。この先も一緒にいたい。",
+        "failureMsg": "うまくいかなかった。失恋の痛みが、人間としての深みを作る。",
+        "stat": "大学時代の恋愛経験者：約65%。大学の出会いから結婚するカップル：全体の約10%"
+      },
+      {
+        "label": "📖 就活・将来に備えて勉強に集中する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.12 },
+        "successRate": 1.0,
+        "effect": { "intellect": 12, "academic": 10, "stress": 15 },
+        "successMsg": "TOEICのスコアが上がり、資格も取得した。就職活動での差別化ができた。",
+        "stat": "TOEIC800点以上を持つ就活生の内定率：700点以下より約15%高い"
+      },
+      {
+        "label": "🌐 留学・海外経験に挑む",
+        "condition": { "money": 100 },
+        "personalityBonus": { "creative": 0.10, "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "intellect": 15, "luck": 10, "money": -150, "stress": 10 },
+        "successMsg": "留学で英語力と国際感覚を身につけた。帰国後は外資系企業も視野に入ってきた。",
+        "stat": "大学時代の留学経験者：約5%。外資・グローバル企業では高く評価される"
+      }
+    ]
+  },
+  {
+    "id": "tp_job_select",
+    "age": 22,
+    "type": "job_select",
+    "title": "就職活動",
+    "description": "社会への第一歩。あなたはどんな仕事に就く？知性・努力が足りない職業は選べない。採用率も現実の統計に基づいている。",
+    "stat": "2024年卒の内定率：96.9%。ただし「希望する職種」に就けた人は約40%"
+  },
+  {
+    "id": "tp_first_job_life",
+    "age": 23,
+    "title": "社会人1年目の洗礼",
+    "description": "学生から社会人への切り替え。理想と現実のギャップ、先輩との関係、仕事の難しさ。この1年がその後の働き方を決める。",
+    "stat": "新卒社員の3年以内離職率：大卒30%・高卒40%（厚生労働省）。最も多い離職理由：仕事内容と待遇のミスマッチ",
+    "choices": [
+      {
+        "label": "💪 どんな仕事も全力でこなす",
+        "condition": null,
+        "personalityBonus": { "studious": 0.12, "ambitious": 0.10 },
+        "successRate": 0.70,
+        "effect": { "effort": 15, "stress": 20 },
+        "successEffect": { "money": 20, "luck": 10, "intellect": 8, "stress": -5 },
+        "failureEffect": { "stress": 30, "health": -10 },
+        "successMsg": "上司から「こいつは使える」と評価された。地道な努力が信頼に変わった。",
+        "failureMsg": "頑張ったが空回り。でも1年間は逃げずに働いた。この経験は次に活きる。",
+        "stat": "1年目に「頑張った」と振り返る社会人：約75%。新人時代の積み上げが昇進に直結する"
+      },
+      {
+        "label": "🔍 仕事をしながら次の転職先を探す",
+        "condition": null,
+        "personalityBonus": { "ambitious": 0.15 },
+        "successRate": 0.45,
+        "effect": { "stress": 25 },
+        "successEffect": { "money": 50, "luck": 8 },
+        "failureEffect": { "stress": 30, "money": -20 },
+        "successMsg": "1社目より好条件の転職先が見つかった。早期転職に成功する人もいる。",
+        "failureMsg": "転職活動は難航した。まず今の仕事で実績を作ることが先決かもしれない。",
+        "stat": "1年目転職の成功率：約40%。転職で年収アップしやすいのは3〜5年目が多い"
+      },
+      {
+        "label": "😴 仕事はほどほどにプライベートを充実させる",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.15, "sociable": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -15, "health": 8, "money": -10, "luck": 5 },
+        "successMsg": "仕事とプライベートのバランスを大切にした。趣味と友人が心の支えになった。",
+        "stat": "ワークライフバランスを重視する若手社員：約70%（2023年調査）"
+      }
+    ]
+  },
+  {
+    "id": "tp_parttime_hustle",
+    "age": 24,
+    "title": "副業・自己投資の選択",
+    "description": "社会人2〜3年目。本業に慣れてきた頃、「このままでいいのか」という問いが浮かぶ。副業、自己投資、それとも現状維持か。",
+    "stat": "副業を持つ会社員：約28%（2022年）。副業解禁企業の割合：約55%（大企業）",
+    "choices": [
+      {
+        "label": "💻 週末にフリーランス・副業を始める",
+        "condition": null,
+        "personalityBonus": { "ambitious": 0.15, "creative": 0.10 },
+        "successRate": 0.50,
+        "effect": { "effort": 10, "stress": 15 },
+        "successEffect": { "money": 60, "luck": 10 },
+        "failureEffect": { "stress": 20, "money": -10 },
+        "successMsg": "副業が軌道に乗った。本業以外の収入源ができ、経済的な余裕が生まれた。",
+        "failureMsg": "副業はうまくいかなかった。本業に集中することにした。",
+        "stat": "副業月収5万円以上を達成した割合：副業開始者の約20%。継続が鍵"
+      },
+      {
+        "label": "📜 資格取得・スキルアップに投資する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.15, "ambitious": 0.08 },
+        "successRate": 0.65,
+        "effect": { "effort": 10, "stress": 10, "money": -20 },
+        "successEffect": { "intellect": 15, "academic": 10, "luck": 8 },
+        "failureEffect": { "intellect": 5, "stress": 15 },
+        "successMsg": "難関資格を取得した。昇給の交渉でも有利になった。",
+        "failureMsg": "試験に落ちた。再挑戦の機会を待ちながら勉強を続ける。",
+        "stat": "資格取得後に昇給した割合：約35%。資格学習にかける費用：年間平均15〜30万円"
+      },
+      {
+        "label": "💰 NISAや積立投資を始める",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "money": -20, "intellect": 5, "stress": 5 },
+        "successMsg": "長期投資を始めた。今は少額でも、複利の力で20年後に大きな差が生まれる。",
+        "stat": "NISAの口座数：2024年に2,300万口座突破。30代以下の新規口座開設が急増"
+      },
+      {
+        "label": "🏋 健康・フィットネスに投資する",
+        "condition": null,
+        "personalityBonus": { "athletic": 0.15, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "health": 15, "stress": -15, "appearance": 8, "money": -15 },
+        "successMsg": "ジムに通い始め、食事も見直した。体が変わると自信も変わる。",
+        "stat": "定期的に運動する成人の割合：約30%。運動習慣は生涯を通じた健康維持の最大の要因"
+      }
+    ]
+  },
+  {
+    "id": "tp_quarter_life",
+    "age": 25,
+    "title": "クォーターライフ・クライシス",
+    "description": "25歳。友人の結婚・昇進・独立。SNSで流れる「成功報告」が焦りを生む。自分はこれでいいのか、人生を問い直す時期。",
+    "stat": "25歳前後に将来への不安を強く感じる割合：約55%（クォーターライフクライシスと呼ばれる）",
+    "choices": [
+      {
+        "label": "🚀 思い切って転職・キャリアチェンジする",
+        "condition": { "effort": 40 },
+        "personalityBonus": { "ambitious": 0.15, "sociable": 0.08 },
+        "successRate": 0.60,
+        "effect": { "stress": 20 },
+        "successEffect": { "money": 80, "luck": 12, "stress": -10 },
+        "failureEffect": { "stress": 30, "money": -30 },
+        "successMsg": "転職先では新鮮な刺激と適切な評価を受けた。年収も上がった。",
+        "failureMsg": "転職先の環境は思ったより厳しかった。でも決断した自分を後悔はしていない。",
+        "stat": "25〜29歳の転職成功率：約65%。25歳は転職市場で最も評価されやすい年齢の一つ"
+      },
+      {
+        "label": "🏠 一人暮らしを始める・自立する",
+        "condition": { "money": 40 },
+        "personalityBonus": { "easygoing": 0.10, "sociable": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": 10, "money": -60, "health": 5, "luck": 8 },
+        "successMsg": "一人暮らしが始まった。自由と引き換えに責任も増えた。自分で全てを決める生活が始まる。",
+        "stat": "一人暮らし開始年齢の平均：22.6歳（日本）。独立後の生活満足度：約65%"
+      },
+      {
+        "label": "💆 今の生活を整えてメンタルを回復させる",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.12 },
+        "successRate": 1.0,
+        "effect": { "stress": -25, "health": 10 },
+        "successMsg": "立ち止まって自分を見つめ直した。焦らなくていい。人生は長い。",
+        "stat": "30代で「25歳の焦りは不要だった」と回答した割合：約70%"
+      },
+      {
+        "label": "🌏 海外移住・ワーキングホリデーを試みる",
+        "condition": { "money": 80 },
+        "personalityBonus": { "creative": 0.10, "ambitious": 0.12 },
+        "successRate": 0.70,
+        "effect": { "money": -100, "stress": 20 },
+        "successEffect": { "intellect": 15, "luck": 15, "stress": -10 },
+        "failureEffect": { "stress": 25, "money": -50 },
+        "successMsg": "海外での生活が始まった。文化も言語も違う環境で、自分の芯が試される。",
+        "failureMsg": "言語の壁や生活の壁に阻まれ、早期帰国することになった。",
+        "stat": "ワーキングホリデー利用者：年間約6万人。オーストラリア・カナダが人気上位"
+      }
+    ]
+  },
+  {
+    "id": "tp_first_serious_romance",
+    "age": 26,
+    "title": "本格的な交際・同棲",
+    "description": "付き合って数年。そろそろ結婚を視野に入れた関係か、このまま別れるか。「結婚前提」という言葉が重くなる年齢。",
+    "stat": "同棲経験者の割合：約40%。同棲後に結婚する確率：約60%",
+    "choices": [
+      {
+        "label": "🏠 同棲を始めて将来を試す",
+        "condition": { "money": 30 },
+        "personalityBonus": { "sociable": 0.10, "easygoing": 0.08 },
+        "successRate": 0.65,
+        "effect": { "money": -30, "stress": 5 },
+        "successEffect": { "stress": -15, "health": 10, "luck": 10 },
+        "failureEffect": { "stress": 30, "money": -20 },
+        "successMsg": "同棲が上手くいっている。一緒に暮らすことで相手の良さをさらに発見した。",
+        "failureMsg": "一緒に住んでみて、相性の悪さが浮き彫りになった。別れの話が出ている。",
+        "stat": "同棲後に結婚する割合：約60%。一方で同棲後に別れるカップルも約40%"
+      },
+      {
+        "label": "💍 プロポーズして婚約する",
+        "condition": { "money": 50 },
+        "personalityBonus": { "ambitious": 0.10, "sociable": 0.08 },
+        "successRate": 0.70,
+        "effect": { "stress": 10, "money": -50 },
+        "successEffect": { "stress": -20, "health": 15, "money": -50 },
+        "failureEffect": { "stress": 35 },
+        "setMarried": true,
+        "successMsg": "YES！婚約指輪を受け取ってもらえた。二人の未来が始まる。",
+        "failureMsg": "「まだその気持ちがない」と言われた。タイミングが合わなかった。",
+        "stat": "26〜28歳でのプロポーズ成功率：約72%。指輪の平均予算：約35万円"
+      },
+      {
+        "label": "💔 別れて新たな出会いを求める",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": 20, "luck": 5 },
+        "successMsg": "勇気を出して別れた。傷は深いが、自分に正直に生きることを選んだ。",
+        "stat": "26〜30歳の間に「本命との別れ」を経験する割合：約45%"
+      }
+    ]
+  },
+  {
+    "id": "tp_marriage",
+    "age": 27,
+    "title": "人生のパートナー選択",
+    "description": "そろそろ結婚を意識する年齢。今の恋人とこの先を決める時か、新たな出会いを求めるか。結婚は人生最大のガチャとも言える。",
+    "stat": "日本人の平均初婚年齢：男性31.1歳、女性29.7歳。生涯未婚率（男性）：28.3%",
+    "choices": [
+      {
+        "label": "💍 プロポーズして結婚する",
+        "condition": { "money": 30 },
+        "successRate": 0.75,
+        "effect": { "stress": 10, "money": -100 },
+        "successEffect": { "stress": -20, "health": 15, "money": -50 },
+        "failureEffect": { "stress": 30 },
+        "setMarried": true,
+        "successMsg": "プロポーズが成功した！二人で歩む人生が始まった。",
+        "failureMsg": "振られてしまった…。相手の気持ちとタイミングが合わなかった。人生はまだ続く。",
+        "stat": "プロポーズ成功率：約75%。断られた理由1位：「まだ結婚のタイミングではない」"
+      },
+      {
+        "label": "🤝 婚活・お見合いをする",
+        "condition": null,
+        "successRate": 0.40,
+        "effect": { "stress": 15, "money": -30 },
+        "successEffect": { "stress": -10, "health": 10, "money": -50 },
+        "failureEffect": { "stress": 20 },
+        "setMarried": true,
+        "successMsg": "婚活が実を結んだ！出会いから数ヶ月でついに入籍。",
+        "failureMsg": "婚活は思うようにいかなかった。焦らず、自分のペースで。",
+        "stat": "婚活サービス利用者の成婚率：約3〜8%/年。平均活動期間：1〜2年"
+      },
+      {
+        "label": "🙅 今は仕事に集中する",
+        "condition": null,
+        "effect": { "money": 80, "intellect": 5 },
+        "stat": "「仕事が理由で結婚を遅らせた」と答えた男性：約42%。キャリアを取った選択も正解かもしれない"
+      }
+    ]
+  },
+  {
+    "id": "tp_career_move",
+    "age": 28,
+    "title": "キャリアの本格的な岐路",
+    "description": "社会人5〜6年目。仕事の実力がついてきた一方、「このままでいいのか」という問いが大きくなる。転職・昇進・起業、どの道を選ぶ？",
+    "stat": "20代後半の転職者数：年間約80万人。転職理由1位：「給与への不満」（約38%）",
+    "choices": [
+      {
+        "label": "📈 今の会社で昇進を狙う",
+        "condition": { "effort": 50 },
+        "personalityBonus": { "ambitious": 0.15, "studious": 0.08 },
+        "successRate": 0.55,
+        "effect": { "stress": 20, "effort": 10 },
+        "successEffect": { "money": 100, "stress": -10, "luck": 8 },
+        "failureEffect": { "stress": 30 },
+        "successMsg": "主任・係長に昇進した。給与が上がり、仕事の裁量も広がった。",
+        "failureMsg": "昇進は見送られた。評価の理由を聞いて、次に活かすことにした。",
+        "stat": "30歳前後での係長・主任昇進率：約35%。昇進は勤続年数より実績が重視される傾向に"
+      },
+      {
+        "label": "🚀 専門性を活かして転職する",
+        "condition": null,
+        "personalityBonus": { "ambitious": 0.12 },
+        "successRate": 0.65,
+        "effect": { "stress": 15 },
+        "successEffect": { "money": 120, "luck": 10 },
+        "failureEffect": { "stress": 25, "money": -20 },
+        "successMsg": "転職先でより高い評価を受けた。専門スキルが市場で通用すると確信できた。",
+        "failureMsg": "転職交渉で希望額に届かなかった。現職に残る選択をした。",
+        "stat": "20代後半の転職での年収変化：アップ約45%、横ばい約30%、ダウン約25%"
+      },
+      {
+        "label": "💼 独立・フリーランスになる",
+        "condition": { "intellect": 55, "effort": 55 },
+        "personalityBonus": { "ambitious": 0.15, "creative": 0.10 },
+        "successRate": 0.40,
+        "effect": { "stress": 25, "money": -20 },
+        "successEffect": { "money": 150, "luck": 15 },
+        "failureEffect": { "stress": 40, "money": -80 },
+        "successMsg": "フリーランスとして独立した。収入は不安定だが、自由と可能性を手に入れた。",
+        "failureMsg": "案件が取れず、2年で廃業。会社員の安定の価値を改めて感じた。",
+        "stat": "フリーランス人口：約460万人（2022年）。3年後の継続率：約50%"
+      }
+    ]
+  },
+  {
+    "id": "tp_marriage_late",
+    "age": 30,
+    "title": "30代の結婚観",
+    "description": "30歳を迎えた。親や友人から「まだ結婚しないの？」という声が増える。自分の答えは何か。",
+    "stat": "30歳時点で未婚の割合：男性51.8%、女性38.5%（2020年国勢調査）",
+    "choices": [
+      {
+        "label": "💍 本気で結婚相手を探す",
+        "condition": { "money": 20 },
+        "successRate": 0.45,
+        "effect": { "stress": 20, "money": -50 },
+        "successEffect": { "stress": -15, "health": 10, "money": -80 },
+        "failureEffect": { "stress": 30 },
+        "setMarried": true,
+        "successMsg": "ついに出会いがあった！少し遅くなったが、幸せはどこにでも転がっている。",
+        "failureMsg": "縁がなかった。それでも人生は続く。独身も悪くない生き方だ。",
+        "stat": "30代前半の婚活成功率：男性約35%、女性約42%"
+      },
+      {
+        "label": "🧘 独身ライフを充実させる",
+        "condition": null,
+        "effect": { "money": 80, "stress": -15, "health": 5 },
+        "stat": "生涯未婚率：男性28.3%、女性17.8%（2020年）。独身者の幸福度は上昇傾向にある"
+      },
+      {
+        "label": "🏠 パートナーと事実婚・同棲を続ける",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.10 },
+        "successRate": 1.0,
+        "effect": { "stress": -10, "money": -20, "health": 8 },
+        "successMsg": "法律婚にこだわらない関係を選んだ。お互いを尊重した生き方がある。",
+        "stat": "事実婚・パートナーシップを選ぶカップル：増加傾向。約3〜5%（推計）"
+      }
+    ]
+  },
+  {
+    "id": "tp_child_decision",
+    "age": 32,
+    "title": "子どもを持つかどうか",
+    "description": "30代前半。子どもを持つかどうか、タイムリミットが近づいている。大きな決断の時。",
+    "stat": "第一子出産の平均年齢：女性30.9歳（2022年）。子育て費用：大学卒業まで約2,000〜3,000万円",
+    "requireMarried": true,
+    "choices": [
+      {
+        "label": "👶 子どもを作ることを決意する",
+        "condition": { "money": 50, "health": 50 },
+        "personalityBonus": { "easygoing": 0.05 },
+        "successRate": 0.80,
+        "effect": { "stress": 20, "money": -50 },
+        "successEffect": { "stress": 15, "health": 10, "money": -100, "hasChildren": 1 },
+        "failureEffect": { "stress": 40, "health": -10, "money": -100 },
+        "successMsg": "赤ちゃんが生まれた！喜びと責任が一気に押し寄せる。これで本当の大人になった気がする。",
+        "failureMsg": "なかなか授からない。不妊治療を始めることにした。精神的にも経済的にも厳しい道が続く。",
+        "stat": "不妊症の割合：カップルの約10%。不妊治療の成功率（体外受精1回）：約25〜30%"
+      },
+      {
+        "label": "📝 不妊治療に挑む",
+        "condition": { "money": 100, "health": 40 },
+        "successRate": 0.45,
+        "effect": { "stress": 40, "money": -200, "health": -10 },
+        "successEffect": { "stress": -10, "health": 10, "hasChildren": 1 },
+        "failureEffect": { "stress": 50, "money": -100, "health": -15 },
+        "successMsg": "不妊治療が実を結んだ。長い戦いの末に授かった命は、何にも代えがたい宝物だ。",
+        "failureMsg": "治療は実らなかった。心身ともに疲弊したが、二人で乗り越えてきたことは確かだ。",
+        "stat": "不妊治療経験者：カップルの約5.5人に1人。保険適用後の治療費は軽減されたが依然負担大"
+      },
+      {
+        "label": "🙅 子どもを持たない選択をする",
+        "condition": null,
+        "effect": { "money": 200, "stress": -20 },
+        "successMsg": "子どもを持たない人生を選んだ。二人の時間と自由を大切にする。",
+        "stat": "子どもを望まないカップルの割合：約15〜20%。DINKS（共働き・子なし）の生活満足度：高い傾向"
+      }
+    ]
+  },
+  {
+    "id": "tp_house",
+    "age": 35,
+    "title": "住宅購入の決断",
+    "description": "35歳。「賃貸か持ち家か」永遠の議論。家族の成長とともに、住む場所をどう決めるか。",
+    "stat": "持ち家率：全体の約61%。住宅購入の平均年齢：40.1歳（フラット35利用者調査）",
+    "choices": [
+      {
+        "label": "🏠 都市部にマンションを購入する",
+        "condition": { "money": 150 },
+        "personalityBonus": { "ambitious": 0.10 },
+        "successRate": 1.0,
+        "effect": { "money": -600, "stress": 20, "health": 5 },
+        "successMsg": "都市部のマンションを購入。資産形成と快適な住環境を手に入れた。ローンは35年…。",
+        "stat": "都市部のマンション平均価格（2024年）：首都圏で約7,000万円。住宅ローン平均借入額：約3,000万円"
+      },
+      {
+        "label": "🏡 郊外に一戸建てを建てる",
+        "condition": { "money": 100 },
+        "successRate": 1.0,
+        "effect": { "money": -400, "stress": 15, "health": 8 },
+        "successMsg": "広い庭のある戸建てを持った。子どもたちが駆け回る声が家に響く。",
+        "stat": "郊外の戸建て平均価格：約3,500〜5,000万円。固定資産税・維持費も考慮が必要"
+      },
+      {
+        "label": "🏢 賃貸暮らしを続ける",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -10, "money": -20, "luck": 5 },
+        "successMsg": "賃貸の自由度を選んだ。転勤や生活変化に柔軟に対応できる。",
+        "stat": "一生賃貸派の増加傾向。「家は負債」という考え方も広まっている"
+      },
+      {
+        "label": "🌄 地方移住・田舎暮らしをする",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.10, "creative": 0.05 },
+        "successRate": 0.65,
+        "effect": { "money": -100, "stress": 5 },
+        "successEffect": { "health": 15, "stress": -20, "money": 20 },
+        "failureEffect": { "stress": 25, "money": -50 },
+        "successMsg": "地方移住が成功した。生活コストが下がり、自然の中で心が豊かになった。",
+        "failureMsg": "地方での仕事が見つからず、都市部に戻ることになった。",
+        "stat": "地方移住希望者（30〜40代）：約30%。移住後の生活満足度：約80%が「満足」"
+      }
+    ]
+  },
+  {
+    "id": "tp_midcareer",
+    "age": 38,
+    "title": "管理職への道",
+    "description": "30代後半。そろそろ管理職・リーダーシップが問われる立場になる。プレイヤーとして続けるか、マネジメントへ転換するか。",
+    "stat": "課長以上の管理職比率：約10%（全雇用者中）。女性管理職割合：約12%（2023年）",
+    "choices": [
+      {
+        "label": "👔 管理職・マネージャーを目指す",
+        "condition": { "effort": 55, "intellect": 50 },
+        "personalityBonus": { "ambitious": 0.15, "sociable": 0.10 },
+        "successRate": 0.45,
+        "effect": { "stress": 20, "effort": 10 },
+        "successEffect": { "money": 150, "stress": 10, "luck": 8 },
+        "failureEffect": { "stress": 25 },
+        "successMsg": "課長に昇進した。部下を持つプレッシャーと喜びが同時にやってくる。",
+        "failureMsg": "昇進は見送られた。自分の強みを別の形で発揮する道を考えよう。",
+        "stat": "課長職以上への昇進率：入社10年以内で約20%。昇進後の平均年収増加：約100〜200万円"
+      },
+      {
+        "label": "🎯 専門職・スペシャリストとして深化する",
+        "condition": { "intellect": 55 },
+        "personalityBonus": { "studious": 0.15, "creative": 0.08 },
+        "successRate": 1.0,
+        "effect": { "intellect": 15, "stress": 5, "money": 80 },
+        "successMsg": "管理職より専門性を選んだ。エキスパートとしての市場価値が高まっている。",
+        "stat": "専門職・エキスパートの平均年収：管理職と同等か上回るケースも増加中"
+      },
+      {
+        "label": "🏢 思い切って別の会社へ転職する",
+        "condition": { "effort": 45 },
+        "personalityBonus": { "ambitious": 0.12 },
+        "successRate": 0.50,
+        "effect": { "stress": 25 },
+        "successEffect": { "money": 200, "luck": 10 },
+        "failureEffect": { "stress": 35, "money": -30 },
+        "successMsg": "転職先でより重要なポジションを得た。環境を変えた判断が正解だった。",
+        "failureMsg": "転職先での文化のギャップに苦しんだ。適応するのに2年かかった。",
+        "stat": "38〜40歳の転職成功率：約45%。40代手前が転職市場での最後の黄金期とも言われる"
+      }
+    ]
+  },
+  {
+    "id": "tp_midlife",
+    "age": 40,
+    "title": "40代の岐路",
+    "description": "働き盛りの40代。このまま続けるか、新たな道を歩むか。体力の衰えも感じ始める年齢だ。",
+    "stat": "40代の転職市場は活発化。転職で年収アップした人：36%、ダウンした人：30%",
+    "choices": [
+      {
+        "label": "💪 今の職場でさらに昇進を目指す",
+        "condition": null,
+        "successRate": 0.35,
+        "effect": { "stress": 20 },
+        "successEffect": { "money": 150, "stress": -5, "intellect": 5 },
+        "failureEffect": { "stress": 30, "money": 30 },
+        "successMsg": "管理職に昇進！給与が上がり、責任も増えた。部下を持つ立場になった。",
+        "failureMsg": "昇進は見送られた。この会社でこれ以上の出世は難しいかもしれない。",
+        "stat": "課長以上に昇進できる会社員：全体の約20%"
+      },
+      {
+        "label": "🔄 転職に挑戦する",
+        "condition": { "effort": 50 },
+        "successRate": 0.55,
+        "effect": { "stress": 20 },
+        "successEffect": { "money": 200, "stress": -10, "luck": 10 },
+        "failureEffect": { "stress": 35, "money": -50 },
+        "successMsg": "転職成功！年収アップと新天地での再スタート。",
+        "failureMsg": "転職活動は長期化し、やむなく条件を下げて移ることになった…",
+        "stat": "40代の転職成功率：約55%。転職活動期間：平均3〜6ヶ月"
+      },
+      {
+        "label": "🏢 独立・起業する",
+        "condition": { "effort": 70, "money": 100 },
+        "successRate": 0.15,
+        "effect": { "stress": 30 },
+        "successEffect": { "money": 400, "luck": 20 },
+        "failureEffect": { "stress": 50, "money": -300 },
+        "successMsg": "起業が軌道に乗った！社長として生きる道が開けた。",
+        "failureMsg": "会社は5年以内に倒産した。借金だけが残った。統計通りの結末だった。",
+        "stat": "起業5年後の生存率：約15%。廃業の最大原因：資金繰り悪化"
+      }
+    ]
+  },
+  {
+    "id": "tp_health_check_40",
+    "age": 42,
+    "title": "40代の健康危機",
+    "description": "40代前半。健康診断で気になる数値が出始めた。生活習慣病の入り口。ここで舵を切るかどうかが、残りの人生を左右する。",
+    "stat": "40代の生活習慣病（高血圧・糖尿病・高脂血症など）有病率：約30〜40%",
+    "choices": [
+      {
+        "label": "🥗 食事・運動習慣を本気で改善する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.08, "easygoing": 0.05 },
+        "successRate": 0.65,
+        "effect": { "effort": 10, "stress": 10 },
+        "successEffect": { "health": 20, "stress": -10 },
+        "failureEffect": { "health": -5, "stress": 15 },
+        "successMsg": "生活習慣が改善された。体重が落ち、数値も正常範囲に戻った。",
+        "failureMsg": "改善しようとしたが、仕事の忙しさに負けてしまった。",
+        "stat": "生活習慣病の予防で節約できる医療費：生涯で平均300〜500万円（厚生労働省推計）"
+      },
+      {
+        "label": "💊 医者の指示通りに薬で管理する",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "health": 5, "money": -30, "stress": 5 },
+        "successMsg": "投薬治療で数値が安定した。薬代と通院費は続くが、大事に至らなかった。",
+        "stat": "高血圧治療薬を服用している日本人：約1,000万人。服薬率：約60%"
+      },
+      {
+        "label": "😤 忙しくて何もできない",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "health": -15, "stress": 20, "money": -20 },
+        "successMsg": "後回しにしてしまった。体はじわじわとむしばまれていく。",
+        "stat": "定期健康診断を受診しない割合：約30%。放置すると治療費は予防コストの10〜100倍になる"
+      }
+    ]
+  },
+  {
+    "id": "tp_overseas_assignment",
+    "age": 45,
+    "title": "海外赴任の打診",
+    "description": "会社から突然の海外赴任の打診。チャンスか、リスクか。家族との生活を変えるかもしれない大きな選択。",
+    "stat": "海外赴任者数：約110万人（2022年外務省）。赴任後の年収増加：平均30〜50%",
+    "choices": [
+      {
+        "label": "✈ 単身赴任で海外へ行く",
+        "condition": { "effort": 50 },
+        "personalityBonus": { "ambitious": 0.12, "sociable": 0.08 },
+        "successRate": 0.70,
+        "effect": { "stress": 25, "money": 80 },
+        "successEffect": { "money": 200, "intellect": 10, "luck": 10 },
+        "failureEffect": { "stress": 40, "money": -30 },
+        "successMsg": "海外での仕事は想像以上の刺激だった。異文化の中で鍛えられた人間力は本物だ。",
+        "failureMsg": "言語・文化の壁が予想より高く、1年で帰国することになった。",
+        "stat": "海外赴任後のキャリアアップ率：約60%。帰国後の昇進・昇給に繋がるケースが多い"
+      },
+      {
+        "label": "👨‍👩‍👧 家族帯同で海外生活を楽しむ",
+        "condition": { "money": 100 },
+        "personalityBonus": { "sociable": 0.10 },
+        "successRate": 0.60,
+        "effect": { "stress": 20, "money": -50 },
+        "successEffect": { "intellect": 8, "luck": 15, "health": 5 },
+        "failureEffect": { "stress": 35, "money": -80 },
+        "successMsg": "家族で海外生活を満喫した。子どもに国際的な視野が生まれた。",
+        "failureMsg": "家族の適応に問題が生じ、早期帰国を選んだ。",
+        "stat": "家族帯同の海外赴任者：全体の約65%。子どもの教育費（インターナショナルスクール）が大きな負担"
+      },
+      {
+        "label": "🙅 家族のために海外赴任を断る",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": 10, "health": 5, "luck": -5 },
+        "successMsg": "家族を優先した。キャリアより大切なものがあると判断した選択だ。",
+        "stat": "海外赴任を断ったことで昇進が遅れたと感じる割合：約25%"
+      }
+    ]
+  },
+  {
+    "id": "tp_parent_care",
+    "age": 48,
+    "title": "親の介護問題",
+    "description": "40代後半。親が高齢になり、介護の問題が現実になってきた。仕事と介護の両立。これは日本社会全体の問題でもある。",
+    "stat": "介護離職者数：年間約9万人。介護期間の平均：5年2ヶ月（生命保険文化センター）",
+    "choices": [
+      {
+        "label": "🏠 仕事を続けながら在宅介護をする",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.05, "sociable": 0.05 },
+        "successRate": 0.55,
+        "effect": { "stress": 30, "health": -10 },
+        "successEffect": { "stress": -10, "health": 5, "luck": 8 },
+        "failureEffect": { "stress": 50, "health": -20, "money": -50 },
+        "successMsg": "在宅介護と仕事を両立できた。家族のサポートと介護サービスをうまく使えた。",
+        "failureMsg": "両立の限界が来てしまった。体も心も限界に達した。",
+        "stat": "介護と仕事を両立できている割合：約40%。要介護者一人あたりの月間介護費用：約8万円"
+      },
+      {
+        "label": "🏥 介護施設に入居させる",
+        "condition": { "money": 100 },
+        "successRate": 1.0,
+        "effect": { "money": -150, "stress": 10 },
+        "successMsg": "施設に入ってもらい、専門家に任せることにした。罪悪感はあるが、これが現実的な選択だ。",
+        "stat": "特別養護老人ホームの入居待ち：全国約27万人（2022年）。民間介護施設の月額：15〜30万円"
+      },
+      {
+        "label": "💼 介護のために仕事を辞める（介護離職）",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": 20, "money": -200, "health": -5 },
+        "successMsg": "仕事を辞めて介護に専念した。親の最後の時間を一緒に過ごせた。",
+        "stat": "介護離職後の再就職成功率：約50%。介護離職による生涯収入の損失：平均約3,000万円"
+      }
+    ]
+  },
+  {
+    "id": "tp_career_change",
+    "age": 50,
+    "title": "50代の大転換",
+    "description": "50歳。「人生100年時代」、まだ半分ある。ここで大きく方向転換するか、これまでの路線を続けるか。",
+    "stat": "50代の転職者数：年間約40万人。50代でのキャリアチェンジ成功率：約25〜35%",
+    "choices": [
+      {
+        "label": "🌱 全く異業種への転職にチャレンジ",
+        "condition": { "effort": 55 },
+        "personalityBonus": { "ambitious": 0.15, "creative": 0.10 },
+        "successRate": 0.30,
+        "effect": { "stress": 30 },
+        "successEffect": { "money": 100, "luck": 15, "stress": -15 },
+        "failureEffect": { "stress": 40, "money": -100 },
+        "successMsg": "異業種での再出発に成功した。50代でも可能性は開けると証明できた。",
+        "failureMsg": "異業種への転換は甘くなかった。収入が大幅に減った。",
+        "stat": "50代の異業種転職：成功すれば平均年収は20〜30%減。しかし充実度は高い傾向"
+      },
+      {
+        "label": "📚 今の経験を活かして独立・コンサルタントになる",
+        "condition": { "intellect": 60, "effort": 55 },
+        "personalityBonus": { "ambitious": 0.10, "studious": 0.08 },
+        "successRate": 0.45,
+        "effect": { "stress": 20 },
+        "successEffect": { "money": 200, "luck": 10 },
+        "failureEffect": { "stress": 35, "money": -80 },
+        "successMsg": "長年の経験が財産になった。コンサルタントとして高い評価を受け始めた。",
+        "failureMsg": "独立したものの案件が取れず、厳しい状況が続いた。",
+        "stat": "50代以降の独立・コンサルタント：成功者の共通点は「特定分野の深い専門性」"
+      },
+      {
+        "label": "😌 このまま今の仕事を定年まで続ける",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -10, "money": 80 },
+        "successMsg": "安定を選んだ。大きな変化はなくても、確かな日々が続く。",
+        "stat": "同一企業への定年まで勤続率：約35%（1980年代から大きく低下）"
+      }
+    ]
+  },
+  {
+    "id": "tp_second_love",
+    "age": 52,
+    "title": "第二の恋愛",
+    "description": "50代前半。離婚後や伴侶との死別後、新たな恋愛の可能性が芽生える。この年齢での恋は、若い頃とは違う深みがある。",
+    "stat": "55歳以上の恋愛・婚活市場が拡大。60代での再婚率：約10%",
+    "requireUnmarried": true,
+    "choices": [
+      {
+        "label": "💕 新しい恋愛に踏み出す",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.10, "easygoing": 0.08 },
+        "successRate": 0.40,
+        "effect": { "stress": 10 },
+        "successEffect": { "health": 15, "stress": -25, "luck": 10 },
+        "failureEffect": { "stress": 20, "health": -5 },
+        "successMsg": "素敵な出会いがあった。この年齢で感じる恋愛は、若い頃とは違う豊かさがある。",
+        "failureMsg": "うまくいかなかった。でも新しい感情を知れただけでも、挑戦する価値はあった。",
+        "stat": "50代以降の新規交際：増加傾向。シニア向け婚活サービス利用者：年間約20万人"
+      },
+      {
+        "label": "🧘 一人の時間を大切にする",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -20, "health": 8, "intellect": 5 },
+        "successMsg": "一人でいることの豊かさを発見した。趣味と自分の時間を充実させた。",
+        "stat": "「一人の生活に満足している」50代独身者：約55%（内閣府調査）"
+      }
+    ]
+  },
+  {
+    "id": "tp_health_50s",
+    "age": 55,
+    "title": "50代の健康管理",
+    "description": "55歳。がんや心臓病、脳卒中などのリスクが高まる年代。健康への向き合い方が、残りの人生の質を決める。",
+    "stat": "55歳以上の三大疾病（がん・心疾患・脳卒中）発症率：年間約1%ずつ増加",
+    "choices": [
+      {
+        "label": "🏥 徹底した健康診断と予防医療に投資する",
+        "condition": { "money": 30 },
+        "personalityBonus": { "studious": 0.05 },
+        "successRate": 0.75,
+        "effect": { "money": -30, "stress": 5 },
+        "successEffect": { "health": 20, "stress": -10, "luck": 8 },
+        "failureEffect": { "health": -10, "stress": 25, "money": -100 },
+        "successMsg": "早期発見で大事に至らなかった。予防医療への投資は最も高い利回りだと実感した。",
+        "failureMsg": "健康診断で大きな問題が見つかった。早めに動いていたからこそ、治療の選択肢はある。",
+        "stat": "がんの早期発見（ステージ1）の5年生存率：約90%以上。進行がん（ステージ4）は約30%以下"
+      },
+      {
+        "label": "🧘 ストレス管理・マインドフルネスに取り組む",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.10 },
+        "successRate": 1.0,
+        "effect": { "health": 10, "stress": -20 },
+        "successMsg": "瞑想・ヨガを日課にした。体だけでなく心の健康が、老後の幸福に直結すると実感。",
+        "stat": "マインドフルネス実践者の健康指標：非実践者と比べて慢性病リスクが約20%低下（研究報告）"
+      },
+      {
+        "label": "😤 仕事優先で健康管理はなおざりにする",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "health": -20, "money": 30, "stress": 25 },
+        "successMsg": "仕事に打ち込んだ。体のサインは無視してきた。後で後悔しないといいが…",
+        "stat": "過労死認定件数：年間約160件。過労死ラインの80時間残業を超える労働者：約10%"
+      }
+    ]
+  },
+  {
+    "id": "tp_child_launch",
+    "age": 58,
+    "title": "子の巣立ちと空の巣症候群",
+    "description": "子どもが独立し、家の中が急に静かになった。新しい夫婦二人の生活。どう向き合うか。",
+    "stat": "「空の巣症候群」を経験する親：母親の約30%。子どもの独立後に夫婦仲が変化するケースも多い",
+    "requireMarried": true,
+    "choices": [
+      {
+        "label": "💑 夫婦の時間を楽しむ・旅行する",
+        "condition": { "money": 50 },
+        "personalityBonus": { "easygoing": 0.10, "sociable": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -25, "health": 8, "money": -50 },
+        "successMsg": "夫婦で旅行を楽しんだ。子育てが終わって、二人だけの時間の豊かさを再発見した。",
+        "stat": "子ども独立後に旅行頻度が増えたカップル：約45%。熟年夫婦旅行市場は拡大傾向"
+      },
+      {
+        "label": "🌱 新しい趣味や社会活動を始める",
+        "condition": null,
+        "personalityBonus": { "creative": 0.10, "sociable": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -20, "health": 10, "intellect": 5 },
+        "successMsg": "長年やりたかったことを始めた。人生の後半を彩る新しい情熱が見つかった。",
+        "stat": "退職・育児終了後に新趣味を始めた人の幸福度：継続者の約75%が「満足」"
+      },
+      {
+        "label": "😢 喪失感に苦しむ",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": 25, "health": -10 },
+        "successMsg": "子どもがいなくなった喪失感に苦しんだ。自分の存在意義を見つめ直す時間になった。",
+        "stat": "空の巣症候群による抑うつ：特に専業主婦に多く、約20〜30%が経験"
+      }
+    ]
+  },
+  {
+    "id": "tp_retirement",
+    "age": 60,
+    "title": "定年前の選択",
+    "description": "60歳。定年退職が近づいてきた。第二の人生の準備をどう進めるか。",
+    "stat": "定年退職年齢：60〜65歳が多い。退職後の生活費：夫婦で月22〜26万円が平均（総務省）",
+    "choices": [
+      {
+        "label": "💰 老後資金を徹底的に準備する",
+        "condition": null,
+        "personalityBonus": { "studious": 0.08, "ambitious": 0.05 },
+        "successRate": 1.0,
+        "effect": { "money": -30, "stress": 10, "intellect": 5 },
+        "successMsg": "老後資金の計画を立て直した。不安が少し和らいだ。",
+        "stat": "老後に必要な資金（夫婦2000万円問題）：2000万円以上保有している60代は約30%"
+      },
+      {
+        "label": "🌿 悠々自適に趣味三昧",
+        "condition": { "money": 200 },
+        "effect": { "health": 20, "stress": -40 },
+        "stat": "65歳以上で趣味・地域活動に参加：約40%。生きがいを持つ高齢者の方が長生き傾向"
+      },
+      {
+        "label": "👴 再雇用・嘱託で働き続ける",
+        "condition": null,
+        "effect": { "money": 100, "stress": 10 },
+        "stat": "65〜69歳の就業率：50.8%（2023年）。働く高齢者が増え続けている"
+      },
+      {
+        "label": "🌾 田舎に移住してスローライフ",
+        "condition": null,
+        "effect": { "health": 20, "stress": -30, "money": -30 },
+        "stat": "地方移住希望者（60代）：約25%。移住者の満足度：80%以上が「満足」と回答"
+      }
+    ]
+  },
+  {
+    "id": "tp_post_retirement",
+    "age": 63,
+    "title": "退職後の生きがい",
+    "description": "仕事から離れた日々。時間はたっぷりある。この自由をどう使うか。人生後半の充実が問われる。",
+    "stat": "退職後に「生きがいがない」と感じる男性：約30%。趣味・ボランティアの有無で幸福度が大きく異なる",
+    "choices": [
+      {
+        "label": "🏫 ボランティア・地域活動に参加する",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.10, "easygoing": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -20, "health": 10, "luck": 8 },
+        "successMsg": "地域の活動が生きがいになった。人とのつながりが、老後の豊かさの源だ。",
+        "stat": "ボランティア活動参加率（60代）：約25%。参加者の健康状態・幸福度は非参加者より高い"
+      },
+      {
+        "label": "📚 生涯学習・大学院に挑戦する",
+        "condition": { "intellect": 55 },
+        "personalityBonus": { "studious": 0.12 },
+        "successRate": 0.70,
+        "effect": { "intellect": 15, "stress": -10, "money": -30 },
+        "successEffect": { "intellect": 20, "luck": 10 },
+        "failureEffect": { "intellect": 8 },
+        "successMsg": "大学院で新しい知識を吸収した。学ぶことに年齢は関係ないと実感。",
+        "failureMsg": "思ったより難しかったが、挑戦したことに意義があった。",
+        "stat": "60代以上の大学院入学者：年間約2,000人。学ぶことに年齢は関係ない"
+      },
+      {
+        "label": "✈ 夢だった長旅・世界一周をする",
+        "condition": { "money": 100, "health": 50 },
+        "personalityBonus": { "creative": 0.10, "sociable": 0.08 },
+        "successRate": 1.0,
+        "effect": { "money": -150, "stress": -30, "health": 10, "luck": 15 },
+        "successMsg": "念願の世界一周旅行を達成した。この年になって初めて見た景色が、人生観を変えた。",
+        "stat": "定年後の旅行志向：約55%が「行きたかった場所に行く」を目標にしている"
+      }
+    ]
+  },
+  {
+    "id": "tp_old_age",
+    "age": 65,
+    "title": "定年退職",
+    "description": "長い働き人生が終わる。老後をどう過ごすか。残りの人生、後悔のない選択を。",
+    "stat": "老後に必要な資金：夫婦で約2,000万円（金融庁報告書）。65歳時点の平均余命：男性19.4年",
+    "choices": [
+      {
+        "label": "🌿 悠々自適に趣味三昧",
+        "condition": { "money": 200 },
+        "effect": { "health": 20, "stress": -40 },
+        "stat": "65歳以上で趣味・地域活動に参加：約40%。生きがいを持つ高齢者の方が長生き傾向"
+      },
+      {
+        "label": "👴 再雇用・嘱託で働き続ける",
+        "condition": null,
+        "effect": { "money": 100, "stress": 10 },
+        "stat": "65〜69歳の就業率：50.8%（2023年）。働く高齢者が増え続けている"
+      },
+      {
+        "label": "🌾 田舎に移住してスローライフ",
+        "condition": null,
+        "effect": { "health": 20, "stress": -30, "money": -30 },
+        "stat": "地方移住希望者（60代）：約25%。移住者の満足度：80%以上が「満足」と回答"
+      },
+      {
+        "label": "🎓 大学院・生涯学習に挑戦",
+        "condition": { "intellect": 55 },
+        "effect": { "intellect": 15, "stress": -10 },
+        "stat": "60代以上の大学院入学者：年間約2,000人。学ぶことに年齢は関係ない"
+      }
+    ]
+  },
+  {
+    "id": "tp_grandchildren",
+    "age": 68,
+    "title": "孫の誕生",
+    "description": "子どもが孫を連れてきた。生まれてきた小さな命を抱いた瞬間、何かが変わった気がした。祖父・祖母としての新しい役割が始まる。",
+    "stat": "祖父母になる平均年齢：60代前半。孫との交流頻度が高い高齢者は認知症リスクが低い（研究報告）",
+    "choices": [
+      {
+        "label": "👶 積極的に孫の世話をする",
+        "condition": { "health": 50 },
+        "personalityBonus": { "sociable": 0.10, "easygoing": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -15, "health": 10, "money": -30 },
+        "successMsg": "孫の笑顔が生きがいになった。老後に新しい家族の絆が生まれた。",
+        "stat": "孫の育児参加が高齢者の身体活動を増加させ、健康維持に寄与する（国立長寿医療研究センター）"
+      },
+      {
+        "label": "🧘 自分の時間も大切にしながら距離を保つ",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -10, "health": 5 },
+        "successMsg": "程よい距離感で関わることにした。孫にとっても、好きなおじいちゃん・おばあちゃんでいたい。",
+        "stat": "「孫の育児に関わりすぎたくない」と思う祖父母：約35%"
+      }
+    ]
+  },
+  {
+    "id": "tp_senior_health",
+    "age": 70,
+    "title": "70代の健康と自立",
+    "description": "70歳。体の衰えを実感しながらも、まだまだ元気でいたい。この時期の生活習慣が、これからの10〜20年を決める。",
+    "stat": "70歳時点での要介護認定率：約4%。75歳以上になると急増し、85歳以上では約60%に達する",
+    "choices": [
+      {
+        "label": "🏃 積極的に運動・外出を続ける",
+        "condition": { "health": 40 },
+        "personalityBonus": { "athletic": 0.05, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "health": 15, "stress": -15 },
+        "successMsg": "毎日のウォーキングと体操を習慣にした。年齢より10歳は若く見られると言われる。",
+        "stat": "週3回以上運動する高齢者の要介護認定率：非運動群の約半分（厚生労働省）"
+      },
+      {
+        "label": "👥 社会的なつながりを大切にする",
+        "condition": null,
+        "personalityBonus": { "sociable": 0.10 },
+        "successRate": 1.0,
+        "effect": { "stress": -20, "health": 8, "luck": 5 },
+        "successMsg": "地域のコミュニティや趣味のグループとの交流が続いている。人とのつながりが元気の秘訣だ。",
+        "stat": "社会的孤立は喫煙並みに健康に悪影響。週1回以上の社会交流で認知症リスクが約30%低下"
+      },
+      {
+        "label": "🏠 家でゆっくり過ごす",
+        "condition": null,
+        "successRate": 1.0,
+        "effect": { "stress": -10, "health": -5 },
+        "successMsg": "のんびりとした生活を選んだ。体は少しずつ衰えていくが、静かな幸せがある。",
+        "stat": "在宅時間が長い高齢者：活動量が減少し、フレイル（虚弱）リスクが高まる傾向"
+      }
+    ]
+  },
+  {
+    "id": "tp_legacy_decision",
+    "age": 75,
+    "title": "人生の整理と遺産",
+    "description": "75歳。終活という言葉が現実になってきた。残された時間に何をするか。財産・思い出・想いをどう残すか。",
+    "stat": "75歳以上の終活実施率：約35%。遺言書作成率：約10%（法務省）",
+    "choices": [
+      {
+        "label": "📝 遺言書・終活の準備をする",
+        "condition": null,
+        "personalityBonus": { "studious": 0.05, "easygoing": 0.05 },
+        "successRate": 1.0,
+        "effect": { "stress": -15, "luck": 5 },
+        "successMsg": "遺言書を書いた。家族に残すメッセージをまとめた。終活は、人生の総仕上げだと感じた。",
+        "stat": "遺言書がないことによる相続争い：家庭裁判所への相続調停申立：年間約1.7万件"
+      },
+      {
+        "label": "🎁 子どもや孫に生前贈与する",
+        "condition": { "money": 100 },
+        "successRate": 1.0,
+        "effect": { "money": -200, "stress": -20, "luck": 10 },
+        "successMsg": "生前に財産を贈与した。「ありがとう」という言葉を生きているうちに受け取れた。",
+        "stat": "生前贈与の活用者増加：年間110万円の非課税枠を利用した贈与件数が増加傾向"
+      },
+      {
+        "label": "💝 思い出を記録・語り継ぐ",
+        "condition": null,
+        "personalityBonus": { "creative": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -20, "intellect": 5 },
+        "successMsg": "自分史・回顧録を書き始めた。生きてきた証を言葉に残すことの意味を感じた。",
+        "stat": "回顧録・自分史を作成した高齢者：認知機能の維持に寄与するという研究結果がある"
+      }
+    ]
+  },
+  {
+    "id": "tp_end_of_life",
+    "age": 80,
+    "title": "晩年の選択",
+    "description": "80歳。人生の黄昏時。体の自由が少なくなってきた。残りの時間をどう過ごすか。",
+    "stat": "80歳時点の平均余命：男性8.8年、女性11.7年（2022年厚生労働省）。要介護認定率：約30%",
+    "choices": [
+      {
+        "label": "🏠 住み慣れた家で最期まで過ごす",
+        "condition": { "health": 35 },
+        "personalityBonus": { "easygoing": 0.05 },
+        "successRate": 0.60,
+        "effect": { "stress": -20, "health": 5 },
+        "successEffect": { "stress": -30, "health": 8 },
+        "failureEffect": { "stress": 20, "health": -15 },
+        "successMsg": "家族や介護サービスの力を借りながら、住み慣れた家で暮らし続けた。",
+        "failureMsg": "在宅での生活が難しくなり、施設へ移ることになった。",
+        "stat": "「自宅で最期を迎えたい」希望者：約60%。しかし実際に自宅死する割合：約17%"
+      },
+      {
+        "label": "🏥 老人ホーム・施設で安心して暮らす",
+        "condition": { "money": 150 },
+        "successRate": 1.0,
+        "effect": { "money": -200, "stress": -15, "health": 5 },
+        "successMsg": "施設での生活を選んだ。専門スタッフに任せて安心できる環境を手に入れた。",
+        "stat": "老人ホーム入居者数：約93万人。月額費用：10〜40万円（施設タイプにより大きく異なる）"
+      },
+      {
+        "label": "🙏 宗教・信仰で心を整える",
+        "condition": null,
+        "personalityBonus": { "easygoing": 0.08 },
+        "successRate": 1.0,
+        "effect": { "stress": -25, "health": 5 },
+        "successMsg": "信仰の中に平和を見つけた。残りの時間を穏やかに過ごすための拠り所ができた。",
+        "stat": "高齢者の宗教活動参加率：約30%。信仰を持つ高齢者は死への不安が少ない傾向"
+      }
+    ]
+  }
+]
